@@ -11,18 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <!-- trebuie imbinate continuturile fisierelor de stil
-    anumite elemente ar putea fi redundante -->
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./sass/_common.scss" />
     <link rel="stylesheet" href="./sass/modal.scss" />
-    <!-- <script type="module" src="./sass/js/index.js"></script> -->
   </head>
   <body>
-    <header class="header-background">
+    <header class="my-library-header-background">
       <section class="header-container">
         <div class="navigation-bar">
           <a href="./index.html" class="logo-container">
@@ -34,9 +30,13 @@
           <nav>
             <ul class="navigation-tabs">
               <li>
-                <a href="./index.html" class="link active-link">HOME</a>
+                <a href="./index.html" class="link">HOME</a>
               </li>
-              <li><a href="./my_library.html" class="link">MY LIBRARY</a></li>
+              <li>
+                <a href="./my_library.html" class="link active-link"
+                  >MY LIBRARY</a
+                >
+              </li>
             </ul>
           </nav>
           <div class="sliding-mode">
@@ -51,41 +51,25 @@
             </label>
           </div>
         </div>
-        <!-- search form -->
-        <div class="form-container">
-          <form class="search-form" id="search-form">
-            <input
-              type="text"
-              name="searchQuery"
-              autocomplete="off"
-              placeholder="Search movies..."
-            />
-            <button type="submit">
-              <svg>
-                <use href="./images/symbol-defs.svg#icon-search"></use>
-              </svg>
-            </button>
-          </form>
-          <!-- mesajul de eroare -->
-          <span class="error-message"></span>
+        <div class="all-buttons-container">
+          <div class="buttons-container">
+            <button class="watched-btn header-button">WATCHED</button>
+            <button class="queue-btn header-button">QUEUE</button>
+          </div>
+          <button class="clear-btn">CLEAR</button>
         </div>
       </section>
     </header>
     <main>
-      <!-- movie cards -->
-      <p class="spinner"></p>
-      <div class="movies-div"></div>
+      <p class="error-message"></p>
+      <div class="movies-div movdiv2"></div>
       <!-- markup for the modal window -->
-      <div class="backdrop visually-shown" data-attribute="modal">
+      <div class="backdrop visually-shown bckdrp" data-attribute="modal">
         <div class="overlay" id="overlay"></div>
         <div class="modal" id="modal">
-          <!--modal_wrapper-->
           <div class="modal-header">
-            <!--modal-->
-            <span class="close" id="closeModalBtn">&times;</span
-            ><!--btn__close-->
+            <span class="close" id="closeModalBtn2">&times;</span>
             <div class="movie-info-container">
-              <!--modal__content-->
               <div class="modal-block-image">
                 <img
                   class="movie-poster image-modal"
@@ -94,13 +78,10 @@
                 />
               </div>
               <div class="all-informations-container">
-                <!--modal-block-->
                 <h2 class="title-film">A FISTFUL OF LEAD</h2>
-                <!--modal-title-->
+
                 <div class="info-film">
-                  <!--film-info-->
                   <ul class="list film-info__names">
-                    <!--names-->
                     <li class="film-info_name">
                       <p class="content-list__item">Vote/Votes</p>
                     </li>
@@ -114,7 +95,7 @@
                       <p class="content-list__item">Genre</p>
                     </li>
                   </ul>
-                  <!--values-->
+
                   <ul class="list film-info___values">
                     <li class="film-info_name">
                       <p class="content-list__item">
@@ -140,15 +121,16 @@
                   takes chase, things take a turn for the worse, as the bandits
                   realize they've been double-crossed - but by who?
                 </p>
-                <!--watched,queue-->
                 <ul class="list-button">
                   <li>
-                    <button class="watched-btn watched-button">
+                    <button class="watched-btn watched-button wbtn2">
                       Add to watched
                     </button>
                   </li>
                   <li>
-                    <button class="queue-btn queue-button">Add to queue</button>
+                    <button class="queue-btn queue-button qbtn2">
+                      Add to queue
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -170,6 +152,6 @@
       </svg>
     </button>
     <script type="module" src="./js/buttons.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/my_library.js"></script>
   </body>
 </html>
