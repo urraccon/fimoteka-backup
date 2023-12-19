@@ -1,11 +1,11 @@
 {
-  "name": "fimoteka-without-firebase",
+  "name": "fimoteka-backup",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://urraccon.github.io/fimoteka-without-firebase",
+  "homepage": "https://urraccon.github.io/fimoteka-backup",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /fimoteka-without-firebase/"
+    "build": "parcel build src/*.html --public-url /fimoteka-backup/"
   },
   "repository": {
     "type": "git",
